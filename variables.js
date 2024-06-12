@@ -284,3 +284,9 @@ let password = pass1234
 
 
 // Fibonacci sequence эхний 10 тоог хэвлэ.
+
+let o = 0 
+while (i <= 1000 ) {
+  colsole.log (hi);
+  o ++;
+}
