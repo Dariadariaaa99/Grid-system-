@@ -16,26 +16,39 @@
     </main>
     <script>
       function run() {
-        const n = getNumberValueFromInput();
+        const n = 10;
         const result = multipleTable(n);
         print(result);
       }
-   
-      function multipleTable(n) {
-        let result = "";
-        for (let i = 1; i <=n; i++) {
-            result = result + generateStars (i);
-            result = result +"\n";
-        }
-        return result;
-      }
-function generateStars (numberOfStars) {
-    let stars = "";
-    for (let i = 0; i < numberOfStars; i++){
-    stars = stars + "* ";
-    }
-    return stars; 
+   function generateStars (count) {
+  let stars = "";
+  for (let i=0; i<count; i++) {
+    stars=stars+"*-";
+  } 
+  return stars;
+  }
+
+  function generateSpaces (count) {
+    let spaves = "";
+    for (let i=0; i< count; i++) {
+      spaces = spaces + "-";
+  }
+  return spaces;
 }
+let result = ""; 
+for (let i=1; i<=n; i++) {
+  result=result +generateSpaces (n-i);
+  if (i === 1 || i === 2 || i === n) {
+    result = result + generateStars (i);
+  } else {
+    result =result + "*-";
+    result =result + generateSpaces (2*i-4);
+    result =result + "*-";
+  }
+  result=result + "\n";
+}
+console.log (result);
+
 
       function getNumberValueFromInput() {
         const inputString = document.getElementById("input").value;
