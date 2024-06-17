@@ -8,13 +8,18 @@
 Дээрх array доторх тоонуудын тэгш болон сондгой тоо тус тус хэд байгааг ол. -->
 
 <script>
-    const arrayOfNumbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290, 11];
-    let sum = arrayOfNumbers.reduce((accumulator,currentValue)=>{
-        return accumulator + currentValue
+    const numbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290, 11];
+    // let sum = 0; 
+    // for (i=0; i< numbers.length; i++){
+    // sum += numbers[i]; 
+    // }
+    // console.log ("The sum of the numbers is:", sum);
+    const numbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290, 11];
+    let max =numbers[0]; 
+    for (i=0; i=numbers.length; i++){
+        if (numbers[i]> max ){
+        max = numbers[i];
     }
-     ,0   );
-     console.log (sum)
-     function arrayOfNumbers(arr) {
-  return Math.min.apply(null, arr);
 }
+console.log ("The biggest number is:", max)
 </script>
